@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Only for you !!!!💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="bgParticles" aria-hidden="true"></div>
+
+  <!-- Landing -->
+  <section id="landing" class="screen active" aria-label="Loading screen">
+    <div class="card center" role="status" aria-live="polite">
+      <div class="title">Only for you !!!!💖</div>
+      <div class="loadingText">Something special is loading</div>
+      <div class="micro">A tiny surprise is being prepared for Ahona…</div>
+    </div>
+  </section>
+
+  <!-- Quiz -->
+  <section id="quiz" class="screen" aria-label="Quiz" hidden>
+    <div class="card">
+      <div class="title center">Our tiny love quiz 💘</div>
+      <p class="subtitle center">Answer each question — the correct choice will gently move you forward.</p>
+
+      <!-- Q1 -->
+      <div class="q" data-correct="Kumurtuli">
+        <h3>1) If we go on a date <span class="bracket">(After your JEE MAINS)</span> then where will I love to go?</h3>
+        <div class="options">
+          <button class="opt">Kumurtuli</button>
+          <button class="opt">Cafe</button>
+          <button class="opt">Cinema</button>
+          <button class="opt">Music concert</button>
+        </div>
+        <div class="inline-msg" role="status" aria-live="polite"></div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="q" data-correct="Romantic old songs" hidden>
+        <h3>2) The type of song you love to listen</h3>
+        <div class="options">
+          <button class="opt">Old days</button>
+          <button class="opt">Romantic old songs</button>
+          <button class="opt">Bollywood songs</button>
+          <button class="opt">Party song</button>
+        </div>
+        <div class="inline-msg" role="status" aria-live="polite"></div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="q" data-correct="Biriyani" hidden>
+        <h3>3) My favourite food</h3>
+        <div class="options">
+          <button class="opt">Biriyani</button>
+          <button class="opt">Polau</button>
+          <button class="opt">Momo</button>
+          <button class="opt">Chinese</button>
+        </div>
+        <div class="inline-msg" role="status" aria-live="polite"></div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="q" data-correct="Yes" hidden>
+        <h3>4) Will you be my mine ❤️?</h3>
+        <div class="options single-col">
+          <button class="opt">Yes</button>
+          <button class="opt">No</button>
+        </div>
+        <div class="inline-msg" role="status" aria-live="polite"></div>
+      </div>
+
+      <!-- Anything you want to tell me box (shown after Q4 YES interstitial OR after Q4 if No) -->
+      <div id="tellBox" class="promptBox" style="display:none" aria-hidden="true">
+        <div class="promptTitle">Anything you want to tell me?</div>
+        <div class="promptButtons">
+          <button id="tellYes" class="bigChoice">YES</button>
+          <button id="tellNo" class="bigChoice no">NO</button>
+        </div>
+
+        <div id="replyArea" class="replyArea" style="display:none">
+          <textarea id="replyText" placeholder="Write what you want to say..." aria-label="Your message"></textarea>
+          <div class="smallActions">
+            <button id="submitReply" class="actionBtn sendBtn">Submit</button>
+            <button id="beautifyReply" class="actionBtn beautifyBtn">Make it more beautiful</button>
+          </div>
+          <div id="replySaved" class="replySaved" style="display:none" aria-live="polite"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- I also Love You interstitial (hidden initially) -->
+  <section id="loveInterstitial" class="screen hidden" aria-hidden="true">
+    <div class="fullLove center" role="status" aria-live="polite">
+      <div class="loveText">I also Love You…</div>
+    </div>
+  </section>
+
+  <!-- Big Birthday message with countdown -->
+  <section id="bigMsg" class="screen" aria-label="Birthday message" hidden>
+    <div class="card center" id="bigMessageCard" role="status" aria-live="polite">
+      <h1 class="bigTitle">Happy Birthday Ahona ♥️</h1>
+      <p class="bigSub">May today be gentle and bright — just like you.</p>
+      <div id="countdown" class="countdown" aria-live="polite">8</div>
+    </div>
+  </section>
+
+  <!-- Short waiting note -->
+  <section id="waiting" class="screen" aria-label="Short waiting" hidden>
+    <div class="card center">
+      <p class="waitingNote">Just a small moment more — the celebration continues. ✨</p>
+    </div>
+  </section>
+
+  <!-- Wish / Cake / Surprise -->
+  <section id="wish" class="screen" aria-label="Wish and surprise" hidden>
+    <div class="card">
+      <div class="title center">Happy Birthday Ahona ♥️♥️🎂🎂</div>
+      <p class="subtitle center">Hope this brought a smile to your face. 🎈</p>
+
+      <div class="cake-wrap" aria-hidden="false">
+        <!-- cake svg -->
+        <svg class="cake" viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg" aria-label="Cake for Ahona">
+          <ellipse cx="200" cy="310" rx="160" ry="18" fill="#f3d7e6"/>
+          <rect x="50" y="220" width="300" height="80" rx="18" fill="#ffb3d1"/>
+          <rect x="50" y="248" width="300" height="10" fill="#ff86b7"/>
+          <rect x="85" y="160" width="230" height="70" rx="16" fill="#ffd6e8"/>
+          <rect x="85" y="190" width="230" height="10" fill="#ffc0dd"/>
+          <rect x="140" y="110" width="120" height="60" rx="12" fill="#fff6fb" stroke="#ffd0e9"/>
+          <path d="M140 140 Q160 160 175 140 Q190 120 205 140 Q220 160 235 140 Q250 120 260 140 L140 140 Z" fill="#ffeef6"/>
+          <rect x="197" y="62" width="6" height="48" rx="3" fill="#ffd36e"/>
+          <rect x="196" y="46" width="8" height="16" rx="3" fill="#ff9f4d"/>
+          <path d="M200 36 C196 44 204 44 200 60 C206 48 194 48 200 36 Z" fill="#ff944d"/>
+          <text x="200" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#9a2d50" font-weight="700">Ahona</text>
+        </svg>
+      </div>
+
+      <div class="center" style="margin-top:10px">
+        <div class="boldText">Hope you enjoyed it and once again — Happy Birthday 🎈💖</div>
+      </div>
+
+      <div class="center" style="margin-top:14px">
+        <button id="surpriseBtn" class="bigChoice" aria-controls="letterContainer">A little surprise for you</button>
+      </div>
+
+      <div id="letterContainer" style="display:none;margin-top:14px">
+        <div class="letter">
+          <div class="letterTitle">only for you 💕</div>
+
+          <div id="simpleLetter">
+            <p style="margin-top:0">My dear Ahona,</p>
+            <p>Happy birthday. I hope today brings quiet smiles and small moments of joy. You mean a lot to me — thank you for being you.</p>
+            <p>Always,</p>
+            <p><strong>— Mourya</strong></p>
+          </div>
+
+          <div class="bengaliNote">ami bhalo gaan korte peri na tor moton tai jei gaan ta toke dedicate korte cha e seita eikhane diye dilam r asha korchi ei website ta dekhar por tor mukhe hasi phuteche.........</div>
+
+          <div id="playerArea" class="yt-wrap" style="display:none"></div>
+          <div id="playerFallback" style="display:none;margin-top:12px;text-align:center;color:#8a3b4f"></div>
+
+          <div id="afterMusicNote" style="display:none;margin-top:12px;text-align:center;font-weight:700;color:#5a2b3c">Asha kori bhalo legeche 😊</div>
+        </div>
+      </div>
+
+      <p class="center smallFoot" style="margin-top:12px">Asha kori eita dekhar por mukhe hasi phuteche 🙂</p>
+    </div>
+  </section>
+
+<script src="script.js" defer></script>
+</body>
+</html>
